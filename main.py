@@ -49,6 +49,7 @@ def boolean():
     return boolean
 
 # Task 3: Control Structures
+# Part A
 def sign_check(num):
     sign = ""
     if num > 0:
@@ -59,6 +60,7 @@ def sign_check(num):
         sign = "Zero"
     return sign
 
+# Part B
 def first_ten_prime_numbers():
     
     #using an array/list for testing purposes and convenience
@@ -78,7 +80,7 @@ def first_ten_prime_numbers():
                 break
     return prime_nums
 
-    
+# Part C
 def hundred_number_sum():
     total = 0 
     limit = 0
