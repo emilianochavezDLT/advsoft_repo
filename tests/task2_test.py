@@ -1,4 +1,6 @@
-from main import main
+from main import int_number, float_number, string, boolean
 
 def test_is_int():
-    assert isinstance(main.int_num, int), "should be an integer"
+    is_int = int_number()
+    assert isinstance(is_int, int), "should be an integer"
+
