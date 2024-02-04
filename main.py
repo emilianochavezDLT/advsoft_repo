@@ -2,11 +2,22 @@
 #Emiliano Chavez De La Torre
 
 def main():
+
+    # Task 1: Introduction to Replit
     print(hello_Replit())
+
+    # Task 2: Varaibles and Data Types
+    int_num = 10
+    float_num = 10.10
+    string = "Hello World"
+    boolean = True
+
     
 
+# Task 1: Introduction to Replit
 def hello_Replit():
     return "Hello Replit!"
+
 
 
 if __name__ == "__main__":
