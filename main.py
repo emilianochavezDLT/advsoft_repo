@@ -3,7 +3,7 @@
 
 def main():
 
-    print("Hello World!")
+    print("Hello Replit!")
 
 
 if __name__ == "__main__":
