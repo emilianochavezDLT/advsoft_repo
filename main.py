@@ -2,8 +2,11 @@
 #Emiliano Chavez De La Torre
 
 def main():
+    print(hello_Replit())
+    
 
-    print("Hello Replit!")
+def hello_Replit():
+    return "Hello Replit!"
 
 
 if __name__ == "__main__":

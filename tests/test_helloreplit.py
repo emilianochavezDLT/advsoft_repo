@@ -1,4 +1,4 @@
-from main import main
+from main import hello_Replit
 
 def test_hello_replit():
-    assert main() == "Hello Replit!"
+    assert hello_Replit() == "Hello Replit!"
