@@ -50,6 +50,17 @@ def main():
     print(product.calculate_discount(100, 0.30))
     print(service.calculate_discount(200, 0.10))
 
+    #Task 5: Lists and Dictionaries
+    
+    #calling the function to return the first 3 books
+    fav_books = my_favorite_books()
+    print(fav_books)
+
+    #creating a dictionary to represent a student
+    student_db = student_database()
+    
+    
+
     
 
 # Task 1: Introduction to Replit
@@ -119,7 +130,26 @@ def hundred_number_sum():
         total = total + limit
     
     return total
+
+
+# Task 5: Lists and Dictionaries
+def my_favorite_books():
     
+    #using a list to store the favorite books
+    fav_books = ["Beginning Python","Linear Algebra for Dummies","The Hobbit", "The Lord of the Rings", "The Odyssey"]
+    
+    #slicing the list to print the first 3 books
+    first_three_books = fav_books[:3]
+    return first_three_books
+
+def student_database():
+    student_db = {
+        #The id is the occurance of the student in the dictionary
+        #The student's name and student_id are stored in a dictionary
+        1:{"name": "John Doe", "student_id": 1234},
+        2:{"name": "Jane Doe", "student_id": 5678},
+    }
+    return student_db
 
 if __name__ == "__main__":
     main()
