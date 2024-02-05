@@ -6,4 +6,12 @@ def test_product_discount():
 
 def test_service_discount():
     service = Service()
-    assert service.calculate_discount(200, 0.10) == 180, "should be 180"
+    assert service.calculate_discount(235, 0.40) == 141, "should be 180"
+
+def test_product_discount_2():
+    product = Product()
+    assert product.calculate_discount(0, 0.30) == 0, "should be 70"
+
+def test_service_discount_2():
+    service = Service()
+    assert service.calculate_discount(0, 0.10) == 0, "should be 180"
