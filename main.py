@@ -1,6 +1,25 @@
 #This is homework 1 for Advanced Software Engineering 4300
 #Emiliano Chavez De La Torre
 
+# Task 4: Functions and Ducktyping
+
+#If it looks like a product, scans like a product, and calculates discounts like a product, then it is a product.
+class Product:
+    #defining the function to calculate the discount
+    def calculate_discount(self, price, discount):
+        discunted_price = price * discount
+        new_price = price - discunted_price
+        return new_price
+
+#If it looks like a service, drains your bank account like a service, and calculates discounts like a service, then it is a service.
+class Service:
+    #defining the function to calculate the discount
+    def calculate_discount(self, price, discount):
+        discunted_price = price * discount
+        new_price = price - discunted_price
+        return new_price
+
+
 def main():
 
     # Task 1: Introduction to Replit
@@ -24,6 +43,12 @@ def main():
 
     #part C
     print(hundred_number_sum())
+
+    #Task 4: Functions and Ducktyping
+    product = Product()
+    service = Service()
+    print(product.calculate_discount(100, 0.30))
+    print(service.calculate_discount(200, 0.10))
 
     
 
@@ -76,6 +101,8 @@ def first_ten_prime_numbers():
                 break
         else: #if the number is not divisible by any other number, it is prime
             prime_nums.append(i)
+
+            #if the list has 10 prime numbers, break the loop
             if len(prime_nums) == 10:
                 break
     return prime_nums
@@ -85,13 +112,14 @@ def hundred_number_sum():
     total = 0 
     limit = 0
 
+    #using the while loop to find the sum of the first 100 numbers
     while limit < 100:
+        #incrementing the limit and adding it to the total
         limit += 1
         total = total + limit
     
     return total
-
-
+    
 
 if __name__ == "__main__":
     main()
