@@ -1,7 +1,7 @@
 from main import my_favorite_books, student_database
 
 def test_my_favorite_books():
-    assert my_favorite_books() == ["Beginning Python","Linear Algebra for Dummies","The Odyssy"], "should be ['Beginning Python','Linear Algebra for Dummies','The Hobbit']"
+    assert my_favorite_books() == ["Beginning Python","Linear Algebra for Dummies","The Hobbit"], "should be ['Beginning Python','Linear Algebra for Dummies','The Hobbit']"
 
 
 
