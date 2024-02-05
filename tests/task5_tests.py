@@ -16,5 +16,7 @@ def test_student_database():
 
 def test_student_database_names():
     student_db = student_database()
+    names = []
     for id, student_dict in student_db.items():
-        assert student_dict["name"] == "John Doe" and student_dict["name"] == "Jane Doe", "should be John Doe or Jane Doe"
+        names.append(student_dict["name"])
+    assert names == ["John Doe", "Jane Doe"], "should be ['John Doe', 'Jane Doe']"
