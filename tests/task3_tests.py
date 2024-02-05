@@ -12,10 +12,6 @@ def test_is_zero():
     is_zero = sign_check(0)
     assert is_zero == "Zero", "should be Zero"
 
-def test_fail():
-    fail = sign_check(0)
-    assert fail == "Positive", "should be Zero"
-
 def test_first_ten_prime_numbers():
     first_ten = first_ten_prime_numbers()
     assert first_ten == [2, 3, 5, 7, 11, 13, 17, 19, 23, 29], "should be the first ten prime numbers"
