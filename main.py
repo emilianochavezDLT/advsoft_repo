@@ -1,10 +1,6 @@
 #This is homework 1 for Advanced Software Engineering 4300
 #Emiliano Chavez De La Torre
 
-
-import os # Technical Documentation was found by this link: https://docs.python.org/3/library/os.html#files-and-directories
-
-
 # Task 4: Functions and Ducktyping
 
 #If it looks like a product, scans like a product, and calculates discounts like a product, then it is a product.
@@ -173,21 +169,7 @@ def count_words_in_file(file_path):
         #counting the words
         word_count = len(words)
     return word_count
-    
-#We are also going to use a decorator to dynamically generate function names
-#for our tests. We will use the os module to get the list of files in the directory
 
-def text_file_test(folder_path, expected_count): #As a decorator, it takes the folder path as an argument
-    def decorator(test_function): #Once we have the folder path, we are going to take the test function as an argument
-        def wrapper(): #The wrapper here will be the function that will generate the function names        
-            for file in os.listdir(folder_path): 
-                if file.endswith(".txt"): #We have to make sure that we are only using text files
-                    file_path = os.path.join(folder_path, file)
-                    print(file_path)
-                    #using the test function to generate the function names
-                    test_function(file_path, expected_count)
-        return wrapper
-    return decorator
 
 
 if __name__ == "__main__":
