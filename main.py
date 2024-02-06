@@ -176,13 +176,16 @@ def count_words_in_file(file_path):
 def text_file_test(folder_path): #As a decorator, it takes the folder path as an argument
     def decorator(test_function): #Once we have the folder path, we are going to take the test function as an argument
         def wrapper(): #The wrapper here will be the function that will generate the function names
-            
+            root = os.path.join(folder_path, '..') # back up one directory, since my tests are in the test folder
+            root = os.path.abspath(root)
+
+
             #This logic will be exeucted when the test function is called
             #getting the list of files in the directory
-            files = os.listdir(folder_path)
+            files = os.listdir(root)
             for file in files:
                 if file.endswith(".txt"): #We have to make sure that we are only using text files
-                    file_path = os.path.join(folder_path, file)
+                    file_path = os.path.join(root, file)
                     #using the test function to generate the function names
                     test_function(file_path)
         return wrapper
