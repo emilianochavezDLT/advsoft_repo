@@ -183,6 +183,7 @@ def text_file_test(folder_path, expected_count): #As a decorator, it takes the f
             for file in os.listdir(folder_path): 
                 if file.endswith(".txt"): #We have to make sure that we are only using text files
                     file_path = os.path.join(folder_path, file)
+                    print(file_path)
                     #using the test function to generate the function names
                     test_function(file_path, expected_count)
         return wrapper
