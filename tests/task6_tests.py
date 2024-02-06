@@ -16,6 +16,8 @@ for file, exepected_count in text_files: #file and expected_count are tuples and
     #So here we are splitting the file path and getting the name of the file without the extension
     test_name = f"test_{file.split('/')[-1].split('.')[0]}" #This is the name of the test function
     test = create_test_function(file, exepected_count) #This is the function that we are going to create
+    
+    #Resource: https://www.geeksforgeeks.org/python-globals-function/
     globals()[test_name] = test #This is creating the function in the global scope
     
     
