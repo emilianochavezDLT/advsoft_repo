@@ -11,7 +11,7 @@ def test_count_words_in_file(file_path): #File path is sent to wrapper function 
     assert count_words_in_file(file_path) == 8
 
 @text_file_test(directory)
-def test_count_words_in_file(file_path):
+def test_count_words_in_file2(file_path):
     #We are going to use the count_words_in_file function to test the word count in the file
     assert count_words_in_file(file_path) == 3
 
