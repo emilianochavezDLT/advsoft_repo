@@ -1,6 +1,10 @@
 #This is homework 1 for Advanced Software Engineering 4300
 #Emiliano Chavez De La Torre
 
+
+import os
+
+
 # Task 4: Functions and Ducktyping
 
 #If it looks like a product, scans like a product, and calculates discounts like a product, then it is a product.
@@ -58,6 +62,11 @@ def main():
 
     #creating a dictionary to represent a student
     student_db = student_database()
+
+    #Task 6: File Handeling and Metaprogramming
+    #calling the function to count the words in a file
+    file_path = "task6file.txt"
+    print(count_words_in_file(file_path))
     
     
 
@@ -103,11 +112,11 @@ def first_ten_prime_numbers():
     prime_nums = []
 
     #using a while loop to find the first 10 prime numbers
-    lower = 2
-    upper_limit = 30 
+    lower = 2 #the first prime number is 2
+    upper_limit = 30 #the upper limit is 30, which is just arbitrary
 
     for i in range (lower, upper_limit): 
-        for j in range(2, i): 
+        for j in range(2, i): #from 2 to the number itself
             if (i % j) == 0: #if the number is divisible by any other number, it is not prime
                 break
         else: #if the number is not divisible by any other number, it is prime
@@ -150,6 +159,35 @@ def student_database():
         2:{"name": "Jane Doe", "student_id": 5678},
     }
     return student_db
+
+# Task 6: File Handeling and Metaprogramming
+def count_words_in_file(file_path):
+    #using the with statement to open the file
+    with open(file_path, 'r') as file:
+        #reading the file and splitting the words
+        words = file.read().split()
+        #counting the words
+        word_count = len(words)
+    return word_count
+    
+#We are also going to use a decorator to dynamically generate function names
+#for our tests. We will use the os module to get the list of files in the directory
+
+def text_file_test(folder_path): #As a decorator, it takes the folder path as an argument
+    def decorator(test_function): #Once we have the folder path, we are going to take the test function as an argument
+        def wrapper(): #The wrapper here will be the function that will generate the function names
+            
+            #This logic will be exeucted when the test function is called
+            #getting the list of files in the directory
+            files = os.listdir(folder_path)
+            for file in files:
+                if file.endswith(".txt"): #We have to make sure that we are only using text files
+                    file_path = os.path.join(folder_path, file)
+                    #using the test function to generate the function names
+                    test_function(file_path)
+        return wrapper
+    return decorator
+
 
 if __name__ == "__main__":
     main()
