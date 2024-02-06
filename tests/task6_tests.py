@@ -7,7 +7,7 @@ import os #Tech Doc: https://docs.python.org/3/library/os.html#files-and-directo
 directory = "../"
 
 #Putting all of the text files in the directory into a list
-text_files = [("../task6file.txt", 8), ("../task6file2.txt", 5)]
+text_files = [("task6file.txt", 8), ("task6file2.txt", 5)]
 
 def create_test_function(file_path, expected_output):
     def test_count_words_in_file():
