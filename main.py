@@ -2,7 +2,7 @@
 #Emiliano Chavez De La Torre
 
 
-import os
+import os # Technical Documentation was found by this link: https://docs.python.org/3/library/os.html#files-and-directories
 
 
 # Task 4: Functions and Ducktyping
@@ -66,7 +66,11 @@ def main():
     #Task 6: File Handeling and Metaprogramming
     #calling the function to count the words in a file
     file_path = "task6file.txt"
+    file_path2 = "task6file2.txt"
     print(count_words_in_file(file_path))
+    print(count_words_in_file(file_path2))
+
+    
     
     
 
@@ -175,17 +179,10 @@ def count_words_in_file(file_path):
 
 def text_file_test(folder_path): #As a decorator, it takes the folder path as an argument
     def decorator(test_function): #Once we have the folder path, we are going to take the test function as an argument
-        def wrapper(): #The wrapper here will be the function that will generate the function names
-            root = os.path.join(folder_path, '..') # back up one directory, since my tests are in the test folder
-            root = os.path.abspath(root)
-
-
-            #This logic will be exeucted when the test function is called
-            #getting the list of files in the directory
-            files = os.listdir(root)
-            for file in files:
+        def wrapper(): #The wrapper here will be the function that will generate the function names        
+            for file in os.listdir(folder_path): 
                 if file.endswith(".txt"): #We have to make sure that we are only using text files
-                    file_path = os.path.join(root, file)
+                    file_path = os.path.join(folder_path, file)
                     #using the test function to generate the function names
                     test_function(file_path)
         return wrapper
