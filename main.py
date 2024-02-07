@@ -1,6 +1,8 @@
 #This is homework 1 for Advanced Software Engineering 4300
 #Emiliano Chavez De La Torre
 
+import numpy as np
+
 # Task 4: Functions and Ducktyping
 
 #If it looks like a product, scans like a product, and calculates discounts like a product, then it is a product.
@@ -66,6 +68,9 @@ def main():
     print(count_words_in_file(file_path))
     print(count_words_in_file(file_path2))
 
+    #Task 7: Package Control in Replit
+    arr = np.array([1, 2, 3, 4, 5])
+    print(arr)
     
     
     
