@@ -72,12 +72,10 @@ def main():
 
   #Task 7: Package Control in Replit
   arr = np.array([1, 2, 3, 4, 5])  # Creating an array using numpy
-  print(arr)
-  #Using numpy to get the mean of the array and sum
-  arr_mean = np.mean(arr)
-  arr_sum = np.sum(arr)
-  print(arr_mean)
-  print(arr_sum)
+  arr_mean, arr_sum = numpy_operations(arr)
+  print(arr_mean, arr_sum)
+
+  
 
 
 # Task 1: Introduction to Replit
@@ -198,6 +196,12 @@ def count_words_in_file(file_path):
     word_count = len(words)
   return word_count
 
+#Task 7: Package Control in Replit
+def numpy_operations(arr):
+  #using numpy to get the mean of the array and sum
+  arr_mean = np.mean(arr)
+  arr_sum = np.sum(arr)
+  return arr_mean, arr_sum
 
 if __name__ == "__main__":
   main()
