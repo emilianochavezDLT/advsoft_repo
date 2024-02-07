@@ -129,9 +129,7 @@ def first_ten_prime_numbers():
 
   for i in range(lower, upper_limit):
     for j in range(2, i):  #from 2 to the number itself
-      if (
-          i % j
-      ) == 0:  #if the number is divisible by any other number, it is not prime
+      if (i % j) == 0:  #if the number is divisible by any other number, it is not prime
         break
     else:  #if the number is not divisible by any other number, it is prime
       prime_nums.append(i)

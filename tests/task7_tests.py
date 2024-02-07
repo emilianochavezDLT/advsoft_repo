@@ -2,7 +2,7 @@ from main import numpy_operations
 import numpy as np
 
 
-def test_array_ops():
+def test_array_ops_mean():
     #Calling numpy operations with an array
 
     #create the array first 
