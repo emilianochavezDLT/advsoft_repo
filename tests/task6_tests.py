@@ -1,9 +1,4 @@
 from main import count_words_in_file
-<<<<<<< HEAD
-import os  #Tech Doc: https://docs.python.org/3/library/os.html#files-and-directories
-=======
-
->>>>>>> 10a3eb263bd9b2ce3fb8a782a13f8055c28853d7
 
 # Task 6: File Handeling and Metaprogramming
 
@@ -20,12 +15,6 @@ def create_test_function(file_path, expected_output):
 
 
 #Dynamically creating test functions for each file in the directory
-<<<<<<< HEAD
-for file, exepected_count in text_files:
-  test_name = f"test_{file.split('/')[-1].split('.')[0]}"
-  test = create_test_function(file, exepected_count)
-  globals()[test_name] = test
-=======
 for file, exepected_count in text_files: #file and expected_count are tuples and are from the text_files list
     #So here we are splitting the file path and getting the name of the file without the extension
     test_name = f"test_{file.split('/')[-1].split('.')[0]}" #This is the name of the test function
@@ -44,4 +33,3 @@ for file, exepected_count in text_files: #file and expected_count are tuples and
 
 
 
->>>>>>> 10a3eb263bd9b2ce3fb8a782a13f8055c28853d7
