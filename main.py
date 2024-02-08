@@ -9,14 +9,36 @@ import numpy as np
 #Task 8: PostgreSQL Database Access in Replit
 '''
 So for this task, I wasn't able to get postgres work on replit, because of the paywall. 
-I don't want to put my credit card information on the website, so I wasn't able to test it.
+I don't want to put my credit card information on the website.
 
 But I can demonstrate my knowledge of SQL and databases by doing the task within this comment.
+Since we are going to be using django eventaully, I will demonstrate SQLite using the django ORM.
+
+First, we are going to create a model for a student
+
+class Student(models.Model):
+  name = models.CharField(max_length=100)
+  student_id = models.IntegerField()
+  age = models.IntegerField()
+
+Then we are going to make migrations: python manage.py makemigrations
+
+We are going to insert a student and query the database
+
+Inserting a student:
+student = Student(name="John Doe", student_id=1234, age=20)
+student.save()
+
+Querying the database to get the student's name by their id:
+student = Student.objects.get(student_id=1234)
+print(student.name) #This will print "John Doe"
+
+
 
 '''
 
-# Task 4: Functions and Ducktyping
 
+#Task 4: Functions and Ducktyping
 
 #If it looks like a product, scans like a product, and calculates discounts like a product, then it is a product.
 class Product:
