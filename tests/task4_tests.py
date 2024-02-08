@@ -1,5 +1,8 @@
 from main import Product, Service
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task4_tests.py
+
 def test_product_discount():
     product = Product()
     assert product.calculate_discount(50, 0.10) == 45, "should be 70"

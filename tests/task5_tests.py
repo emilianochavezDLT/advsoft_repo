@@ -1,5 +1,8 @@
 from main import my_favorite_books, student_database
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task5_tests.py
+
 def test_my_favorite_books():
     assert my_favorite_books() == ["Beginning Python","Linear Algebra for Dummies","The Hobbit"], "should be ['Beginning Python','Linear Algebra for Dummies','The Hobbit']"
 

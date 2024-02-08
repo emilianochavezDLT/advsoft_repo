@@ -3,6 +3,18 @@
 
 import numpy as np
 
+#Task 1-3 and 5-7 are in the main function
+
+
+#Task 8: PostgreSQL Database Access in Replit
+'''
+So for this task, I wasn't able to get postgres work on replit, because of the paywall. 
+I don't want to put my credit card information on the website, so I wasn't able to test it.
+
+But I can demonstrate my knowledge of SQL and databases by doing the task within this comment.
+
+'''
+
 # Task 4: Functions and Ducktyping
 
 

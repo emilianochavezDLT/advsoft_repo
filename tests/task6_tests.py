@@ -1,5 +1,9 @@
 from main import count_words_in_file
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task6_tests.py
+
+
 # Task 6: File Handeling and Metaprogramming
 
 #Putting all of the text files in the directory into a list

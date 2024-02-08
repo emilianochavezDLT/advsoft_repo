@@ -1,6 +1,10 @@
 from main import numpy_operations
 import numpy as np
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task7_tests.py
+
+
 
 def test_array_ops_mean():
     #Calling numpy operations with an array

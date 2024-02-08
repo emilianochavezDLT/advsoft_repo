@@ -1,5 +1,8 @@
 from main import int_number, float_number, string, boolean
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task2_tests.py
+
 # Task 2: Varaibles and Data Types
 def test_is_int():
     is_int = int_number()

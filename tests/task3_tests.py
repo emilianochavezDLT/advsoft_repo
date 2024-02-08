@@ -1,5 +1,9 @@
 from main import sign_check, first_ten_prime_numbers, hundred_number_sum
 
+# To test on pytest, In replit I used the command:
+# pytest tests/task3_tests.py
+
+
 def test_is_positive():
     is_positive = sign_check(11)
     assert is_positive == "Positive", "should be Positive"
