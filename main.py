@@ -1,6 +1,9 @@
 #This is homework 1 for Advanced Software Engineering 4300
 #Emiliano Chavez De La Torre
 
+#To run all of the tests, run the following command in the terminal:
+# pytest tests/task*_tests.py
+
 import numpy as np
 
 #Task 1-3 and 5-7 are in the main function
